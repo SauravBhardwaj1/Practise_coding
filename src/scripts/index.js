@@ -6,9 +6,13 @@ filterBtn.addEventListener('click',()=>{
     window.location.href="./filter.html"
 })
 
-const fetchData = async()=>{
+let page=0
+
+const fetchDataAdd = async()=>{
+    page=page+1;
+
     try {
-        let res= await fetch(`https://jsonmock.hackerrank.com/api/football_matches`)
+        let res= await fetch(`https://jsonmock.hackerrank.com/api/football_matches?page=${page}`)
         let data= await res.json()
 
         let outputData = data.data
@@ -18,7 +22,23 @@ const fetchData = async()=>{
     }
 }
 
-fetchData()
+fetchDataAdd()
+
+const fetchDataSub = async()=>{
+    page=page-1;
+    
+    try {
+        let res= await fetch(`https://jsonmock.hackerrank.com/api/football_matches?page=${page}`)
+        let data= await res.json()
+
+        let outputData = data.data
+        displayData(outputData)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 
 const displayData = (data)=>{
     document.querySelector('tbody').innerHTML= null
