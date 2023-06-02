@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <style>
+        #chart{
+            
+            border: 1px solid black;
+            width: 50vw;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="chart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+        var ctx, chart
+
+        window.addEventListener('load', function(){
+            ctx = document.getElementById('chart');
+            chart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                    datasets: [
+                    {
+                        label: "Attendance",
+                        data: [100,89,48,40,58,30,90],
+                        
+                    },
+                    {
+                        label: "Performace",
+                        data: [80,82,30,49,59,45,89]
+                    }
+                ],
+                    borderWidth: 1
+                }
+            });
+        })
+        
+    </script>
+</body>
+</html>
