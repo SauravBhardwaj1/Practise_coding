@@ -4,6 +4,9 @@ const toggler = ()=>{
     var index=-1
     return function(){
         index=index+1
+        if(index>=arr.length){
+            index=0
+        }
         return arr[index]
     }
 }
