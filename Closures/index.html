@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Button 1</button>
+    <button id="btn2">Button 2</button>
+
+    <script>
+        
+    
+        let add = (function(){
+            let counter = 0
+            
+            return function(){
+                counter++;
+                this.innerText = counter
+            }
+        })()
+           
+    
+        let add1 = (function(){
+            let counter = 0
+            
+            return function(){
+                counter++;
+                this.innerText = counter
+            }
+        })()
+    
+        btn.onclick= add
+        btn2.onclick = add1
+    </script>
+</body>
+</html>
