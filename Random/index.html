@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Background Color on Button Click</title>
+    <script>
+      function changeColor() {
+        var inputBox = document.getElementById("input-box");
+        var colors = ["red", "green", "blue", "yellow", "orange", "purple"];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        inputBox.style.backgroundColor = randomColor;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Change Background Color on Button Click</h1>
+    <input type="text" id="input-box">
+    <br>
+    <button onclick="changeColor()">Change Color</button>
+  </body>
+</html>
