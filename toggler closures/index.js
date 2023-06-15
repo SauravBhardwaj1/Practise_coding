@@ -18,3 +18,13 @@ console.log(toggle())
 console.log(toggle())
 console.log(toggle())
 console.log(toggle())
+
+
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.innerHTML === "Hello") {
+      x.innerHTML = "Toggled text!";
+    } else {
+      x.innerHTML = "Hello";
+    }
+  }
