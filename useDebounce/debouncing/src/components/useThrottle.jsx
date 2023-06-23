@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useThrottle } from 'your-use-throttle-library'; // Replace with your actual useThrottle hook
+import { useThrottle } from '../hooks/useThrottle';
 
 const FormValidationExample = () => {
   const [inputValue, setInputValue] = useState('');

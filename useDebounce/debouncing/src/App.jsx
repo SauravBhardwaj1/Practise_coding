@@ -2,6 +2,7 @@
 import './App.css'
 import Throttle from './components/Throttle'
 import Debounce from './components/debounce'
+import FormValidationExample from './components/useThrottle'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
      <Debounce />
      <Throttle />
+     <FormValidationExample />
     </>
   )
 }
