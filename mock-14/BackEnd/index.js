@@ -5,6 +5,7 @@ const {connection}=require("./db")
 // const {auth}=require("./Middlewar/auth")
 const {userRouter}=require("./Routes/users.route")
  const {quizRouter}=require("./Routes/quiz.route")
+const bodyParser = require('body-parser');
 
 
 
@@ -14,7 +15,7 @@ const app=express()
 
 app.use(express.json()) // inbuild middleware
 app.use(cors())   //community Middelware
-
+app.use(bodyParser.json());
 
 
 
